@@ -1,2 +1,18 @@
 <h1> Thank You For using The service</h1>
-<b> Your Response is recorded</b>
+<h2> Your Response is recorded</h2>
+
+Date: <b id="demo"></b><br>
+Time: <b id="dem"></b><br>
+
+<script>
+const d = new Date();
+date=d.getDate();
+mont=d.getMonth();
+ye=d.getFullYear();
+document.getElementById("demo").innerHTML = date +"-" + (mont+1)+"-"+ye;
+h=d.getHours();
+m=d.getMinutes();
+s=d.getSeconds();
+
+document.getElementById("dem").innerHTML = h+":"+m+":"+s;
+</script>
