@@ -1,10 +1,48 @@
+<title>Track Post</title>
+<body oncload="getLocation()">
 <h1> Thank You For using The service</h1>
 <h2> Your Response is recorded</h2>
-
+Loc:<p id="dat"></p>
 Date: <b id="demo"></b><br>
 Time: <b id="dem"></b><br>
 
 <script>
+  const x = document.getElementById("dat");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 const d = new Date();
 date=d.getDate();
 mont=d.getMonth();
@@ -16,3 +54,5 @@ s=d.getSeconds();
 
 document.getElementById("dem").innerHTML = h+":"+m+":"+s;
 </script>
+  
+</body>
